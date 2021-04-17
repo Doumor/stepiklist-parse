@@ -5,6 +5,10 @@ const axios = require('axios'); // Requiest lib
 
 const fs = require('fs');
 
+if (!fs.existsSync('./data'){
+    fs.mkdirSync('./data');
+}
+
 let fscourses = fs.createWriteStream('data/sert+free') // Write streams
 
 let fcourses = fs.createWriteStream('data/free')
